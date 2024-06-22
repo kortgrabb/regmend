@@ -1,4 +1,4 @@
-use std::{fs, process};
+use std::process;
 use regmand::{cli, file_io, regex_processor};
 
 fn main() {
