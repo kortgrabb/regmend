@@ -10,6 +10,8 @@ pub struct Args {
     pub new_text: String,
     #[arg(short, long)]
     pub overwrite: bool,
+    #[arg(short, long)]
+    pub echo: bool,
 }
 
 pub fn get_matches() -> Args {
