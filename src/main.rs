@@ -5,8 +5,8 @@ fn main() {
     let args = cli::get_matches();
 
     let path = args.file_name.as_str();
-    let pattern = args.regex.as_str();
-    let replacement = args.new.as_str();
+    let pattern = args.pattern.as_str();
+    let replacement = args.new_text.as_str();
 
     let to_replace = match file_io::read_file(path) {
         Ok(content) => content,

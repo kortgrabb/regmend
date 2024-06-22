@@ -5,12 +5,11 @@ pub struct Args {
     #[arg(short, long)]
     pub file_name: String,
     #[arg(short, long)]
-    pub regex: String,
+    pub pattern: String,
     #[arg(short, long)]
-    pub new: String,
+    pub new_text: String,
 }
 
-// regextool -i "input-file" -m "regex" -r "replace"
 pub fn get_matches() -> Args {
     let args = Args::parse();
     args
