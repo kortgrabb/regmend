@@ -1,5 +1,4 @@
 use std::fs;
-use std::fs::File;
 use std::io::{self, Read, Write};
 
 pub fn read_file(path: &str) -> io::Result<String> {
