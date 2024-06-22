@@ -41,7 +41,8 @@ fn main() {
 
     // Print the information
     println!("Regex replace successful!");
-    if args.echo {
+    
+    if args.echo && args.overwrite {
         println!("old: {}", to_replace);
         println!("new: {}", new_text);
     }
