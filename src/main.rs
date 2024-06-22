@@ -23,8 +23,13 @@ fn main() {
             process::exit(1);
         }
     };
-
-    if let Err(e) = file_io::write_file(path, &new_text) {
+    let mut path_to_write = String::new();
+    if args.overwrite {
+        path_to_write = "replaced-".to_string() + path;
+    } else {
+        path_to_write = path.to_string();
+    }
+    if let Err(e) = file_io::write_file(path_to_write.as_str(), &new_text) {
         eprintln!("Error writing to file: {}", e);
         process::exit(1);
     }

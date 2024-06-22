@@ -8,6 +8,8 @@ pub struct Args {
     pub pattern: String,
     #[arg(short, long)]
     pub new_text: String,
+    #[arg(short, long)]
+    pub overwrite: bool,
 }
 
 pub fn get_matches() -> Args {
